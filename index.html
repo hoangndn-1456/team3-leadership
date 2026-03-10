@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hạm Đội Tàu Biển — Chiến Lược Lãnh Đạo Nhóm</title>
+  <meta name="description" content="Chiến lược lãnh đạo đội nhóm theo mô hình phân quyền 3 tầng: SDM → PL → Members. Câu chuyện Hạm Đội Tàu Biển." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Stars Background -->
+  <div class="stars-container" id="starsContainer"></div>
+
+  <!-- Side Navigation -->
+  <nav class="nav" id="sideNav">
+    <button class="nav-dot active" data-target="hero" data-label="Mở đầu"></button>
+    <button class="nav-dot" data-target="pain" data-label="Thực trạng"></button>
+    <button class="nav-dot" data-target="vision" data-label="Tầm nhìn"></button>
+    <button class="nav-dot" data-target="phase1" data-label="Giai đoạn 1"></button>
+    <button class="nav-dot" data-target="phase2" data-label="Giai đoạn 2"></button>
+    <button class="nav-dot" data-target="phase3" data-label="Giai đoạn 3"></button>
+    <button class="nav-dot" data-target="risks" data-label="Rủi ro"></button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="images/hero_fleet.png" alt="Fleet of ships at sunset" />
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">⚓ Chiến Lược Lãnh Đạo</div>
+      <h1 class="reveal reveal-delay-1">Hạm Đội Tàu Biển</h1>
+      <p class="hero-subtitle reveal reveal-delay-2">
+        Từ một Thuyền Trưởng đơn độc điều khiển cả hạm đội,<br/>
+        đến mô hình phân quyền 3 tầng — nơi mỗi con tàu đều có người lái lèo vững vàng.
+      </p>
+      <div class="hero-stats reveal reveal-delay-3">
+        <div class="hero-stat">
+          <span class="hero-stat-number" data-count="100">0</span>
+          <span class="hero-stat-label">Thành viên</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number" data-count="10">0</span>
+          <span class="hero-stat-label">Dự án</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number" data-count="3">0</span>
+          <span class="hero-stat-label">Giai đoạn</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Cuộn xuống</span>
+      <div class="arrow"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 1: PAIN POINTS
+       ═══════════════════════════════════════════ -->
+  <section class="section pain-section" id="pain">
+    <div class="section-inner">
+      <div class="section-label reveal">Bối Cảnh & Thực Trạng</div>
+      <h2 class="section-title reveal reveal-delay-1">
+        Thuyền Trưởng Đơn Độc<br/>Giữa Bão Tố
+      </h2>
+      <p class="section-desc reveal reveal-delay-2">
+        Khi một người cố gắng điều khiển cả hạm đội 10 con tàu với gần 100 thủy thủ — 
+        bão tố là điều không thể tránh khỏi.
+      </p>
+
+      <div class="pain-visual reveal reveal-delay-3">
+        <div class="pain-icon-scene">
+          <span class="captain">🚢</span>
+          <div class="pain-waves">🌊🌊🌊🌊🌊</div>
+        </div>
+
+        <div class="pain-cards">
+          <div class="pain-card">
+            <div class="pain-card-icon">😰</div>
+            <h4>SDM Quá Tải</h4>
+            <p>Bị cuốn vào quá nhiều cuộc họp, chưa biết cách ủy quyền. Thường xuyên rơi vào trạng thái kiệt sức — vừa phải đảm bảo delivery vừa phải tạo động lực cho team.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-card-icon">🔗</div>
+            <h4>Khoảng Cách Vô Hình</h4>
+            <p>Giữa SDM và PL tồn tại một "khoảng cách vô hình" khiến việc giao tiếp trở nên khó khăn. SDM thiếu tin tưởng, không tạo đủ sức ảnh hưởng cho PL.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-card-icon">📊</div>
+            <h4>Năng Lực Không Đồng Đều</h4>
+            <p>10 PL với năng lực không đồng đều, không có thời gian coaching. SDM không có thời gian để đào tạo và phát triển đội ngũ kế cận.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating elements -->
+    <div class="float-element" style="top: 10%; left: 5%; --dur: 7s;">⚡</div>
+    <div class="float-element" style="top: 70%; right: 8%; --dur: 9s; animation-delay: 2s;">🌪️</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 2: VISION
+       ═══════════════════════════════════════════ -->
+  <section class="section vision-section" id="vision">
+    <div class="section-inner">
+      <div class="section-label reveal">Mục Tiêu Chiến Lược</div>
+      <h2 class="section-title reveal reveal-delay-1">
+        Từ Kiểm Soát Trực Tiếp<br/>Sang Phân Quyền 3 Tầng
+      </h2>
+      <p class="section-desc reveal reveal-delay-2">
+        Mô hình Đô Đốc – Thuyền Trưởng – Thủy Thủ: tận dụng sức mạnh của tầng giữa 
+        để tăng sức ảnh hưởng mà không cần quản lý vi mô.
+      </p>
+
+      <div class="vision-model reveal reveal-delay-3">
+        <!-- Tier 1: Admiral / SDM -->
+        <div class="tier tier-admiral">
+          <div class="tier-icon">👑</div>
+          <div class="tier-info">
+            <h4>Đô Đốc — SDM</h4>
+            <p>Chiến lược tổng thể, định hướng hạm đội, quyết định lớn</p>
+          </div>
+        </div>
+
+        <div class="tier-connector"></div>
+
+        <!-- Tier 2: Captains / PLs -->
+        <div class="tier tier-captain">
+          <div class="tier-icon">🧭</div>
+          <div class="tier-info">
+            <h4>Thuyền Trưởng — PL</h4>
+            <p>Vận hành từng con tàu, quản lý thủy thủ đoàn, báo cáo lên Đô Đốc</p>
+          </div>
+        </div>
+
+        <div class="tier-connector"></div>
+
+        <!-- Tier 3: Sailors / Members -->
+        <div class="tier tier-sailor">
+          <div class="tier-icon">⚓</div>
+          <div class="tier-info">
+            <h4>Thủy Thủ — Members</h4>
+            <p>Thực thi nhiệm vụ, phối hợp trong đội, phát triển kỹ năng</p>
+          </div>
+        </div>
+
+        <div class="vision-benefit">
+          <p>
+            ✨ SDM có thể <strong>tăng sức ảnh hưởng đến toàn bộ 100 members</strong> 
+            mà không cần phải trực tiếp họp hành vi mô — qua đòn bẩy của 10 PL.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="float-element" style="top: 15%; right: 10%; --dur: 10s;">🌟</div>
+    <div class="float-element" style="bottom: 20%; left: 3%; --dur: 8s; animation-delay: 3s;">🧭</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PHASE 1: Foundation
+       ═══════════════════════════════════════════ -->
+  <section class="section phase-section phase-1" id="phase1">
+    <div class="section-inner">
+      <div class="section-label reveal">Lộ Trình Giai Đoạn 1</div>
+
+      <div class="phase-header reveal reveal-delay-1">
+        <div class="phase-number">1</div>
+        <div>
+          <h2 class="section-title" style="margin-bottom: 4px;">Nền Tảng</h2>
+          <p style="color: var(--gold-light); font-size: 1rem;">Chuẩn Hóa & Xây Dựng Niềm Tin</p>
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="phase-visual reveal reveal-delay-2">
+        <div class="phase-scene">
+          <span class="ship-emoji" title="Flagship">🏴‍☠️</span>
+          <span class="ship-emoji" style="font-size: 2.5rem;" title="PL ship 1">⛵</span>
+          <span class="ship-emoji" style="font-size: 2.5rem;" title="PL ship 2">⛵</span>
+          <span class="ship-emoji" style="font-size: 2.5rem; opacity: 0.5;" title="PL ships (đang đánh giá)">⛵</span>
+          <span class="ship-emoji" style="font-size: 2.5rem; opacity: 0.3;" title="PL ships">⛵</span>
+        </div>
+      </div>
+
+      <div class="phase-why reveal reveal-delay-2">
+        <p>
+          Cần hiểu rõ năng lực PL, xóa bỏ khoảng cách vô hình giữa SDM và PL, 
+          thiết lập cơ sở phân quyền rõ ràng để đặt đúng người vào đúng dự án.
+        </p>
+      </div>
+
+      <div class="phase-actions reveal reveal-delay-3">
+        <div class="phase-action">
+          <div class="phase-action-icon">📋</div>
+          <h4>Đánh Giá Năng Lực</h4>
+          <p>Dùng mô hình 9-box, Skill-Will để đánh giá 10 PL. Lập ma trận ghép điểm mạnh từng PL với yêu cầu dự án.</p>
+        </div>
+        <div class="phase-action">
+          <div class="phase-action-icon">📐</div>
+          <h4>Thiết Lập RACI & Quy Trình</h4>
+          <p>Định nghĩa rõ ranh giới: SDM lo chiến lược, PL lo vận hành. Chuẩn hóa JD, KPI và quy trình báo cáo Hourensou.</p>
+        </div>
+        <div class="phase-action">
+          <div class="phase-action-icon">🤝</div>
+          <h4>Rã Đông — Xóa Khoảng Cách</h4>
+          <p>Tổ chức họp Vision Alignment và 1-1 để chia sẻ tầm nhìn, thiết lập sự cởi mở và tin cậy giữa SDM—PL.</p>
+        </div>
+      </div>
+
+      <div class="phase-output reveal reveal-delay-4">
+        <div class="phase-output-icon">🎯</div>
+        <p><strong>Output:</strong> Bản đồ nhân sự rõ ràng, hệ thống KPI minh bạch và bắt đầu tạo dựng được niềm tin.</p>
+      </div>
+    </div>
+
+    <div class="float-element" style="top: 5%; right: 5%; --dur: 11s;">📜</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PHASE 2: Development
+       ═══════════════════════════════════════════ -->
+  <section class="section phase-section phase-2" id="phase2">
+    <div class="section-inner">
+      <div class="section-label reveal">Lộ Trình Giai Đoạn 2</div>
+
+      <div class="phase-header reveal reveal-delay-1">
+        <div class="phase-number">2</div>
+        <div>
+          <h2 class="section-title" style="margin-bottom: 4px;">Phát Triển</h2>
+          <p style="color: var(--ocean-light); font-size: 1rem;">Trao Quyền, Đào Tạo & Coaching</p>
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="phase-visual reveal reveal-delay-2">
+        <div class="phase-scene">
+          <span class="ship-emoji" title="SDM - giám sát từ xa">🔭</span>
+          <span class="ship-emoji" title="PL ship 1">🚢</span>
+          <span class="ship-emoji" title="PL ship 2">🚢</span>
+          <span class="ship-emoji" title="PL ship 3">🚢</span>
+          <span class="ship-emoji" style="font-size: 2.5rem; opacity: 0.7;" title="PL đang phát triển">⛵</span>
+        </div>
+      </div>
+
+      <div class="phase-why reveal reveal-delay-2">
+        <p>
+          PL cần được trang bị kỹ năng để không bị sốc áp lực, 
+          đồng thời SDM cần giảm tải các công việc sự vụ.
+        </p>
+      </div>
+
+      <div class="phase-actions reveal reveal-delay-3">
+        <div class="phase-action">
+          <div class="phase-action-icon">🔑</div>
+          <h4>Trao Quyền Từng Bước</h4>
+          <p>Break down các task, ủy quyền quản lý vận hành cho PL có năng lực tốt nhất trước.</p>
+        </div>
+        <div class="phase-action">
+          <div class="phase-action-icon">🎓</div>
+          <h4>Coaching & Đào Tạo</h4>
+          <p>Coaching 1-1 định kỳ, đặt câu hỏi để PL tự giải quyết vấn đề. Workshop kỹ năng quản lý.</p>
+        </div>
+        <div class="phase-action">
+          <div class="phase-action-icon">📡</div>
+          <h4>Mượn Lực (Leverage)</h4>
+          <p>SDM truyền thông điệp qua PL. Công khai ủng hộ quyết định PL trước team để xây uy tín.</p>
+        </div>
+        <div class="phase-action">
+          <div class="phase-action-icon">📊</div>
+          <h4>Thay Đổi Cách Giám Sát</h4>
+          <p>SDM rút khỏi daily meeting, chuyển sang Dashboard, KPI và báo cáo nhanh.</p>
+        </div>
+      </div>
+
+      <div class="phase-output reveal reveal-delay-4">
+        <div class="phase-output-icon">🎯</div>
+        <p><strong>Output:</strong> PL nắm vững kỹ năng, bắt đầu điều hành dự án. SDM được giảm tải họp hành, chỉ quản lý tổng thể.</p>
+      </div>
+    </div>
+
+    <div class="float-element" style="top: 10%; left: 4%; --dur: 9s;">🎓</div>
+    <div class="float-element" style="bottom: 15%; right: 6%; --dur: 12s; animation-delay: 4s;">💡</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PHASE 3: Sustainability
+       ═══════════════════════════════════════════ -->
+  <section class="section phase-section phase-3" id="phase3">
+    <div class="section-inner">
+      <div class="section-label reveal">Lộ Trình Giai Đoạn 3</div>
+
+      <div class="phase-header reveal reveal-delay-1">
+        <div class="phase-number">3</div>
+        <div>
+          <h2 class="section-title" style="margin-bottom: 4px;">Bền Vững</h2>
+          <p style="color: var(--teal); font-size: 1rem;">Tối Ưu Hóa, Vận Hành Phân Tầng & Kế Cận</p>
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="phase-visual reveal reveal-delay-2">
+        <div class="phase-scene">
+          <span class="ship-emoji" title="PL 1 - tự vận hành">🚢</span>
+          <span class="ship-emoji" title="PL 2 - tự vận hành">🚢</span>
+          <span class="ship-emoji" title="PL 3 - tự vận hành">🚢</span>
+          <span class="ship-emoji" title="PL 4 - tự vận hành">🚢</span>
+          <span class="ship-emoji" title="Sub-PL mới">⛵</span>
+          <span class="ship-emoji" title="Sub-PL mới">⛵</span>
+        </div>
+      </div>
+
+      <div class="phase-why reveal reveal-delay-2">
+        <p>
+          Đưa hệ thống vào vận hành độc lập, kéo đồng đều năng lực của 10 PL 
+          và chuẩn bị lứa nhân sự dự phòng.
+        </p>
+      </div>
+
+      <div class="phase-actions reveal reveal-delay-3">
+        <div class="phase-action">
+          <div class="phase-action-icon">⚙️</div>
+          <h4>Vận Hành Độc Lập</h4>
+          <p>PL hoàn toàn làm chủ. SDM chỉ tham gia Customer meeting, KPT, Sprint Review.</p>
+        </div>
+        <div class="phase-action">
+          <div class="phase-action-icon">🔄</div>
+          <h4>Peer-Learning</h4>
+          <p>Tổ chức "Fuck-up Nights" / "Success Stories" — chia sẻ chéo giữa các PL để kéo đồng đều năng lực.</p>
+        </div>
+        <div class="phase-action">
+          <div class="phase-action-icon">👥</div>
+          <h4>Đội Ngũ Kế Cận</h4>
+          <p>Hướng dẫn PL dùng 9-Box Grid tìm kiếm "Key members" và "Sub-PLs", tạo hệ thống kế thừa nhiều tầng.</p>
+        </div>
+        <div class="phase-action">
+          <div class="phase-action-icon">📈</div>
+          <h4>Đo Lường & Tinh Chỉnh</h4>
+          <p>Rà soát mô hình qua EES, CSS, survey ý kiến thành viên để tinh chỉnh liên tục.</p>
+        </div>
+      </div>
+
+      <div class="phase-output reveal reveal-delay-4">
+        <div class="phase-output-icon">🎯</div>
+        <p><strong>Output:</strong> Hệ thống tự vận hành ổn định khi không có SDM, có sẵn đội ngũ PL mới dự phòng.</p>
+      </div>
+    </div>
+
+    <div class="float-element" style="top: 8%; right: 3%; --dur: 8s;">🏆</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       RISK MANAGEMENT
+       ═══════════════════════════════════════════ -->
+  <section class="section risk-section" id="risks">
+    <div class="section-inner">
+      <div class="section-label reveal">Quản Trị Rủi Ro</div>
+      <h2 class="section-title reveal reveal-delay-1">
+        Phòng Tránh Bão<br/>Trước Khi Ra Khơi
+      </h2>
+      <p class="section-desc reveal reveal-delay-2">
+        Mỗi hành trình đều có rủi ro. Chuẩn bị kỹ càng là chìa khóa 
+        để hạm đội vượt qua mọi sóng gió.
+      </p>
+
+      <div class="risk-cards reveal reveal-delay-3">
+        <!-- Risk 1 -->
+        <div class="risk-card">
+          <div class="risk-card-header">
+            <div class="risk-card-icon">🎯</div>
+            <h4>Thiên Kiến (Bias)</h4>
+          </div>
+          <p class="risk-desc">
+            SDM có xu hướng chỉ tin tưởng/giao việc cho các PL cũ, "hợp gu" — 
+            tạo sự bất công và bỏ sót nhân tài.
+          </p>
+          <div class="risk-solution">
+            <div class="risk-solution-label">Phòng tránh</div>
+            <p>Dùng Data, KPI khách quan và khung năng lực chuẩn để đánh giá thay vì cảm tính.</p>
+          </div>
+        </div>
+
+        <!-- Risk 2 -->
+        <div class="risk-card">
+          <div class="risk-card-header">
+            <div class="risk-card-icon">⚔️</div>
+            <h4>Xung Đột (Conflict)</h4>
+          </div>
+          <p class="risk-desc">
+            PL cảm thấy áp lực quá mức khi nhận quyền mà chưa đủ kỹ năng; 
+            Member không phục PL; hoặc PL lạm quyền.
+          </p>
+          <div class="risk-solution">
+            <div class="risk-solution-label">Phòng tránh</div>
+            <p>Lộ trình ủy quyền tăng dần. Đào tạo kỹ năng quản lý. SDM trao quyền công khai và không can thiệp trực tiếp.</p>
+          </div>
+        </div>
+
+        <!-- Risk 3 -->
+        <div class="risk-card">
+          <div class="risk-card-header">
+            <div class="risk-card-icon">🔀</div>
+            <h4>Lệch Pha (Mismatch)</h4>
+          </div>
+          <p class="risk-desc">
+            Giao quyền sai người. Thông tin truyền đạt SDM → PL → Member 
+            bị "tam sao thất bản".
+          </p>
+          <div class="risk-solution">
+            <div class="risk-solution-label">Phòng tránh</div>
+            <p>Chuẩn hóa kênh thông tin. Giám sát chặt giai đoạn đầu. Thiết lập "checkpoint" can thiệp kịp thời.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="float-element" style="top: 15%; left: 5%; --dur: 10s;">⚠️</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-content reveal">
+      <div class="footer-fleet">⛵🚢🚢🚢⛵⛵</div>
+      <h3>Hạm Đội Sẵn Sàng Ra Khơi</h3>
+      <p>Chiến lược 3 giai đoạn — Từ kiểm soát đến phân quyền — Từ đơn độc đến bền vững</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
