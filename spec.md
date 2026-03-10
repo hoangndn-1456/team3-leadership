@@ -83,3 +83,6 @@
    - *Phòng tránh:* Chuẩn hóa kênh thông tin. Có cơ chế giám sát chặt chẽ giai đoạn đầu và thiết lập các "checkpoint" để can thiệp kịp thời.
 
 ---
+
+## Contributors / Feedback
+Feel free to leave comments or open PRs against this section to contribute to the spec.
