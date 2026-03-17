@@ -155,4 +155,10 @@ document.addEventListener('DOMContentLoaded', () => {
     heroReveals.forEach(el => el.classList.add('visible'));
   }, 300);
 
+  // ── Sun Bear hero float — fade in after logo ──
+  setTimeout(() => {
+    const bearImg = document.querySelector('.sun-bear-hero-float img');
+    if (bearImg) bearImg.classList.add('visible');
+  }, 1400);
+
 });

@@ -93,6 +93,68 @@
   filter: drop-shadow(0 0 4px rgba(242,101,34,0.6));
 }
 
+/* ── Sun Bear — Hero floating corner ── */
+.sun-bear-hero-float {
+  position: absolute;
+  bottom: 80px;
+  right: 5%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.sun-bear-hero-float img {
+  height: 72px;
+  width: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease 1.2s, transform 1s ease 1.2s;
+  filter: drop-shadow(0 4px 16px rgba(242, 101, 34, 0.5));
+  animation: bearBob 4s ease-in-out infinite 2.5s;
+}
+
+.sun-bear-hero-float img.visible {
+  opacity: 0.92;
+  transform: translateY(0);
+}
+
+@keyframes bearBob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50%       { transform: translateY(-10px) rotate(2deg); }
+}
+
+/* ── Sun Bear — Footer (large, centrepiece) ── */
+.sun-bear-footer-wrap {
+  margin: 0 auto 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.sun-bear-footer-wrap img {
+  height: 120px;
+  width: auto;
+  filter: drop-shadow(0 0 24px rgba(242, 101, 34, 0.45))
+          drop-shadow(0 8px 20px rgba(0,0,0,0.5));
+  animation: bearWave 3s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes bearWave {
+  0%, 100% { transform: rotate(-3deg) translateY(0); }
+  30%       { transform: rotate(3deg) translateY(-6px); }
+  60%       { transform: rotate(-2deg) translateY(-3px); }
+}
+
+.sun-bear-footer-tagline {
+  margin-top: 10px;
+  font-size: 0.78rem;
+  color: rgba(242, 101, 34, 0.7);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 /* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
