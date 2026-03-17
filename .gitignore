@@ -1,1 +1,17 @@
+# macOS
 .DS_Store
+
+# Planning & admin documents
+Action Plan.csv
+Feedback.csv
+draff.md
+project_context.md
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Misc
+node_modules/
