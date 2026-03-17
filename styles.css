@@ -814,10 +814,64 @@ body {
   z-index: 1;
 }
 
-.footer-fleet {
+/* Footer Unity Scene — BOTTOM illustration */
+.footer-unity-scene {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.footer-compass {
   font-size: 3rem;
-  margin-bottom: 24px;
-  letter-spacing: 1rem;
+  margin-bottom: 8px;
+  animation: compassPulse 3s ease-in-out infinite;
+}
+
+@keyframes compassPulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+.footer-fleet-formation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.fleet-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.fleet-ship {
+  font-size: 2.2rem;
+  transition: transform 0.4s;
+  animation: sailForward 4s ease-in-out infinite;
+}
+
+.fleet-ship:hover { transform: translateY(-6px) scale(1.1); }
+
+.fleet-ship.fleet-lead {
+  font-size: 2.8rem;
+  filter: drop-shadow(0 0 8px var(--gold));
+}
+
+.fleet-ship.fleet-small {
+  font-size: 1.6rem;
+  opacity: 0.7;
+}
+
+@keyframes sailForward {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.footer-vision-line {
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  margin: 12px auto 0;
   opacity: 0.3;
 }
 
