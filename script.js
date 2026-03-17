@@ -137,6 +137,18 @@ document.addEventListener('DOMContentLoaded', () => {
   updateActiveNav();
   animateCounters();
 
+  // ── Detail Panel Toggle ──
+  document.querySelectorAll('.detail-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panelId = btn.getAttribute('aria-controls');
+      const panel = document.getElementById(panelId);
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      btn.setAttribute('aria-expanded', !isOpen);
+      panel.classList.toggle('open', !isOpen);
+    });
+  });
+
   // ── Smooth reveal for hero content ──
   setTimeout(() => {
     const heroReveals = document.querySelectorAll('.hero .reveal');
